@@ -60,6 +60,7 @@ header {
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
+  z-index: 10;
 }
 
 nav.navegacion {
@@ -243,6 +244,14 @@ footer {
   justify-content: space-between;
 }
 
+@media (min-width:0px) and (max-width:768px){
+  .pie_pag{
+    display: flex;
+    flex-flow: column wrap;
+    padding: 4em 8.5% 2em;
+  }
+}
+
 .pie_pag ul {
   flex-direction: column;
   justify-content: space-evenly;
@@ -279,6 +288,15 @@ h3 {
   width: 10.5em;
 }
 
+@media (min-width:360px){
+  .pie_pag__cont1 .pie_pag__logo{
+    margin-bottom: 1em;
+  }
+  h3{
+    margin-bottom: 1em;
+  }
+}
+
 .pie_pag__cont1 .link_secc a, .pie_pag__cont1 .pie_pag__text_gen {
   padding: 10px 0;
   color: #F1BF7B;
@@ -290,6 +308,15 @@ h3 {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+@media (min-width:0px) and (max-width:768px){
+  .pie_pag__cont1{
+    width: 100%;
+  }
+  .pie_pag__cont2{
+    width: 100%;
+   }
 }
 
 .pie_pag__cont2 .cont_pie_selec {
@@ -315,12 +342,32 @@ h3 {
   text-decoration: none;
 }
 
+@media screen and (min-width:0px) and (max-width:1024px){
+  .pie_pag__cont1 .link_secc a, .pie_pag__cont1 .pie_pag__text_gen{
+    font-size: 0.875rem;
+  }
+  .pie_pag__cont2 .link_secc a, .pie_pag__cont2 .text_gen_pie{
+    font-size: 0.875rem;
+    padding: 8px 0;
+  }
+}
+
 .pie_pag__cont2 .icn {
   width: 32px;
   height: 32px;
   margin-right: 5px;
   background-repeat: no-repeat;
   flex: none;
+}
+
+@media (min-width:0px) and (max-width:768px){
+  .pie_pag__cont2 div:nth-child(1){
+    padding-left: 0em;
+  }
+  .pie_pag__cont2 .cont_pie_selec{
+    width: 100%;
+    margin-bottom: 2em;
+  }
 }
 
 .pie_pag__cont2 .icn.bi_mail {
