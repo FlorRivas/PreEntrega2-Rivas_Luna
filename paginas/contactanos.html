@@ -15,41 +15,57 @@
   <!-- Cabecera -->
   <header>
     <nav class="navegacion">
-      <div class="navegacion__cont_logotipo">
-        <img src="../img/marca_por_amor.svg"  alt="POR_AMOR" class="class_logo">
-      </div>    
-      <ul class="navegacion__cont_nav">
-        <li class="nav_item">
-            <a href="../index.html">Inicio</a>
-        </li>
-        <li class="nav_item">
-            <a href="./nosotros.html">Nosotros</a>
-        </li>
-        <li class="nav_item">
-            <a href="./productos.html">Productos</a>
-        </li>
-        <li class="nav_item">
-            <a href="./promociones.html">Promociones</a>
-        </li>
-        <li class="nav_item">
-            <a href="./contactanos.html">Cont&aacute;ctanos</a>
-        </li>
-      </ul>
-      <div class="navegacion__iconos_nav">
-        <div class="navegacion__iconos_nav--busqueda">
-          <input id="search_text" type="text" size="20" placeholder="Búsqueda...">
+      <div class="navegacion__cont">
+        <div class="navegacion__cont_logotipo">
+          <a href="../index.html">
+            <img src="../img/imgs_gen/marca_por_amor.svg"  alt="Logo_POR_AMOR" class="class_logo">
+          </a>
         </div>
-        <img src="../img/lupa.svg" alt="icon_busqueda" class="wh_iconos">
-        <img src="../img/pedidos.svg" alt="icon_pedidos" class="wh_iconos">
-        <img src="../img/login.svg" alt="icon_login" class="wh_iconos">
+        <label for="menu" class="navegacion__cont_label">
+          <img src="../img/imgs_gen/menu.svg" class="navegacion__svg" alt="Icono del menu">
+        </label>
+        <input type="checkbox" id="menu" class="navegacion__cont_input">   
+        <ul class="navegacion__cont_nav">
+            <li class="navegacion__cont_item">
+                <a class="navegacion__cont_item-a" href="../index.html">Inicio</a>
+            </li>
+            <li class="navegacion__cont_item">
+                <a class="navegacion__cont_item-a" href="./nosotros.html">Nosotros</a>
+            </li>
+            <li class="navegacion__cont_item">
+                <a class="navegacion__cont_item-a" href="./productos.html">Productos</a>
+            </li>
+            <li class="navegacion__cont_item">
+                <a class="navegacion__cont_item-a" href="./promociones.html">Promociones</a>
+            </li>
+            <li class="navegacion__cont_item">
+                <a class="navegacion__cont_item-a" href="./contactanos.html">Cont&aacute;ctanos</a>
+            </li>
+        </ul>
+        <div class="navegacion__cont_iconos_nav">
+            <div class="navegacion__cont_iconos_nav--busqueda">
+              <input id="search_text" type="text" size="20" placeholder="Búsqueda...">
+            </div>
+            <img src="../img/imgs_gen/lupa.svg" alt="Icono_de_búsqueda" class="wh_iconos">
+            <img src="../img/imgs_gen/pedidos.svg" alt="Icono_de_pedidos" class="wh_iconos">
+            <img src="../img/imgs_gen/login.svg" alt="Icono_de_login" class="wh_iconos">
+        </div>
       </div>
     </nav>
   </header>
+  <!-- Main -->
+  <main>
+    <div class="icon_whatsapp_fixed">
+      <a href="index.html">
+        <img src="img/imgs_gen/whatsapp_floating.svg" alt="botón de whatsapp que redirecciona a otra página para contactarse con por amor">
+      </a>
+    </div>
+  </main>
   <!-- Footer -->
   <footer>
     <section class="pie_pag">
       <div class="pie_pag__cont1">
-        <img src="../img/marca_por_amor.svg" alt="POR_AMOR" class="pie_pag__logo">
+        <img src="../img/imgs_gen/marca_por_amor.svg" alt="POR_AMOR" class="pie_pag__logo">
         <p class="pie_pag__text_gen">Copyright &copy; 2024 POR AMOR | Todos los derechos reservados</p>
       </div>
       <div class="pie_pag__cont2">
