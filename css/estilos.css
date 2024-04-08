@@ -228,13 +228,14 @@ a:hover{
   border-radius: 20%;
   box-shadow: 0 1px 2px 0 rgba(251, 238, 217, 0.7), 0 1px 8px 2px rgba(251, 238, 217, 0.42);
 }
+/* Fin de Menu */
 
 /* Fin de Header */
 
 /* Main */
 .main_cont{
   width: 100%;
-  height: 100dvh;
+  height: auto;
   max-width: 100%;
   min-width: 320px;
   position: relative;
@@ -291,26 +292,49 @@ a:hover{
   }
 }
 
-.main_cont__txt_ft3-Regular {
+/* Pagina Nosotros */
+.main_cont__bg-bloque{
+  width: 100%;
+  height: auto;
+  background: rgba(134, 162, 187, 0.3);
+  padding: 1.7rem;
+  border: .1px solid rgba(134, 162, 187, 0.3);
+  border-radius: 1.4rem;
+  box-shadow: 0px 0px 8px rgba(134, 162, 187, 0.3);
+}
+.main_cont__img-bd-radius{
+  border-radius: 1rem;
+}
+/* Fin pagina nosotros */
+
+/* Contenido General */
+
+.main_cont__ft1 {
+  font-family: 'Vollkorn-Regular';
+}
+
+.main_cont__ft2-light {
+  font-family: 'NotoSans-Light';
+}
+
+.main_cont__ft3-Regular {
   font-family: 'Literata-Regular';
   line-height: normal;
 }
 
-.main_cont__txt__c--primary{
+.main_cont__c--primary{
   color: #f1bf7b;
 }
 
-.main_cont__txt__c--secundary{
+.main_cont__c--secundary{
   color: #fbeed9;
 }
 
-.main_cont__txt_ft1 {
-  font-family: 'Vollkorn-Regular';
+.main_cont__c--tertiary{
+  color: #262626;
 }
 
-.main_cont__txt_ft2-light {
-  font-family: 'NotoSans-Light';
-}
+/* Fin de contenido general  */
 
 .main_cont__btn {
   width: 16em;
@@ -398,6 +422,7 @@ a:hover{
 
 /*  Footer */
 footer {
+  position: relative;
   background-color: #262626;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.45);
 }
