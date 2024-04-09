@@ -137,7 +137,6 @@ ul li a {
 @media (max-width:1500px){
   .navegacion__cont_nav{
     display: none;
-    font-size: 1rem;
   }
   .navegacion__cont_iconos_nav{
     flex-direction: column-reverse;
@@ -197,8 +196,7 @@ a:hover{
 .navegacion__cont_label, .navegacion__cont_input{
   display: none;
 }
-
-
+/* Menu media queries mobile */
 @media (max-width:1500px) {
   .navegacion__cont_label{
   display: block;
@@ -213,6 +211,7 @@ a:hover{
     bottom: 0;
     background: #262626;
     width: 100%;
+    font-size: 1.125rem;
     left: 0;
     align-items: center;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
@@ -220,6 +219,12 @@ a:hover{
   .navegacion__cont_input:checked + .navegacion__cont_nav{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     overflow: hidden;
+  }
+  .navegacion__cont_item-a:hover{
+    display:none;
+  }
+  .navegacion__cont_item-a:active{
+    color: #fbeed9;
   }
 }
 
@@ -302,9 +307,19 @@ a:hover{
   border-radius: 1.4rem;
   box-shadow: 0px 0px 8px rgba(134, 162, 187, 0.3);
 }
-.main_cont__img-bd-radius{
+.main_cont__img--bd_radius-1{
   border-radius: 1rem;
 }
+.main_cont__img--bd-radius-2{
+  border-radius: 2rem;
+}
+
+@media (max-width:700px){
+  .main_cont__img--bd-radius-2{
+    border-radius: 1.8rem;
+  }
+}
+
 /* Fin pagina nosotros */
 
 /* Contenido General */
