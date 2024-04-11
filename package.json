@@ -1,0 +1,19 @@
+{
+  "name": "pag_por_amor",
+  "version": "1.0.0",
+  "description": "proyecto con sass",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FlorRivas/PreEntrega2-Rivas_Luna.git"
+  },
+  "author": "Flor Rivas Luna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FlorRivas/PreEntrega2-Rivas_Luna/issues"
+  },
+  "homepage": "https://github.com/FlorRivas/PreEntrega2-Rivas_Luna#readme"
+}
