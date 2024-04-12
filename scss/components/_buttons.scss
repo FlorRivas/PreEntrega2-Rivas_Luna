@@ -1,0 +1,61 @@
+@use '../utilities/mixins';
+@use '../utilities/functions';
+
+.main_cont{
+
+    &__btn {
+        width: functions.pixeles-em(256);
+        height: functions.pixeles-em(55.2);
+        padding: 20px 40px;
+        border-radius: 40px;
+        @include mixins.flexible(flex, row, center, center);
+        text-decoration: none;
+        cursor: pointer;
+        gap: 8px;
+
+        @include movil(){width: 14em;}
+        @include movil(1024px){width: 15em;}
+
+        &--text{
+            font-size: functions.pixeles-em(20);
+            font-weight: 600;
+
+            @include movil(620px){font-size: functions.pixeles-rem(17.60);}
+            @include movil(){font-size: functions.pixeles-rem(17.60);}
+        }
+        &--primary {
+            background-color: $color-secundary;
+            color: $color-tertiary;
+        }
+        &--secondary {
+            border: 1px solid $color-primary;
+            color: $color-primary;
+        }
+        &:active,
+        &:hover {
+            background-color: $color-primary;
+            color: $color-tertiary;
+            font-weight: 600;
+            box-shadow: 0 1px 3px 0 rgba(241, 191, 123,.25), 0 4px 8px 3px rgba(241, 191, 123,.15);
+            fill: $color-tertiary;
+        }
+    }
+    &__icon-descarga {
+        width: functions.pixeles-em(19.2);
+        height: auto;
+        fill: $color-primary;
+    }
+}
+
+.icon_whatsapp_fixed {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+    border-radius: 100%;
+    z-index:4;
+    border: 1px solid #29a71a;
+    box-shadow: 0 1px 3px 0 rgba(41, 167, 26,.35), 0 4px 8px 3px rgba(41, 167, 26,.2);
+}

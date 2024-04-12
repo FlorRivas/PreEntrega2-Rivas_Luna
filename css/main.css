@@ -1,3 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  list-style: none;
+}
 
+@font-face {
+  font-family: "Vollkorn-Regular";
+  src: url("../fonts/Vollkorn-Regular.otf");
+}
+@font-face {
+  font-family: "NotoSans-Regular";
+  src: url("../fonts/NotoSans-Regular.otf");
+}
+@font-face {
+  font-family: "NotoSans-Light";
+  src: url("../fonts/NotoSans-Light.otf");
+}
+@font-face {
+  font-family: "Literata-Regular";
+  src: url("../fonts/Literata-Regular.otf");
+}
+h1, h2, h3, h4, h5, h6, span {
+  font-family: "Literata-Regular";
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+a, li {
+  font-family: "Vollkorn-Regular";
+}
+
+.main_cont__btn {
+  width: 16em;
+  height: 3.45em;
+  padding: 20px 40px;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  gap: 8px;
+}
+@media screen and (max-width: 768px) {
+  .main_cont__btn {
+    width: 14em;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .main_cont__btn {
+    width: 15em;
+  }
+}
+.main_cont__btn--text {
+  font-size: 1.25em;
+  font-weight: 600;
+}
+@media screen and (max-width: 620px) {
+  .main_cont__btn--text {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main_cont__btn--text {
+    font-size: 1.1rem;
+  }
+}
+.main_cont__btn--primary {
+  background-color: #fbeed9;
+  color: #262626;
+}
+.main_cont__btn--secondary {
+  border: 1px solid #f1bf7b;
+  color: #f1bf7b;
+}
+.main_cont__btn:active, .main_cont__btn:hover {
+  background-color: #f1bf7b;
+  color: #262626;
+  font-weight: 600;
+  box-shadow: 0 1px 3px 0 rgba(241, 191, 123, 0.25), 0 4px 8px 3px rgba(241, 191, 123, 0.15);
+  fill: #262626;
+}
+.main_cont__icon-descarga {
+  width: 1.2em;
+  height: auto;
+  fill: #f1bf7b;
+}
+
+.icon_whatsapp_fixed {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  position: fixed;
+  right: 20px;
+  bottom: 30px;
+  border-radius: 100%;
+  z-index: 4;
+  border: 1px solid #29a71a;
+  box-shadow: 0 1px 3px 0 rgba(41, 167, 26, 0.35), 0 4px 8px 3px rgba(41, 167, 26, 0.2);
+}
 
 /*# sourceMappingURL=main.css.map */
