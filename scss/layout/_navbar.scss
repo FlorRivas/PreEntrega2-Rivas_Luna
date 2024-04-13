@@ -70,7 +70,44 @@
                 gap: functions.pixeles-rem(8);
             }
         }
+        &_label, 
+        &_input{
+            display: none;
+        }
+        @include movil(1500px){
+            &_label{
+            display: block;
+            cursor: pointer;
+            }
+            &_nav{
+                @include mixins.flexible(flex, column, space-evenly, center);
+                position: fixed;
+                top: 80px;
+                bottom: 0;
+                background: $background-primary;
+                width: 100%;
+                font-size: functions.pixeles-rem(18);
+                left: 0;
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            }
+            &_input:checked + &_nav{
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                // overflow: hidden;
+            }
+            &_item--a:hover{
+                display:none;
+            }
+            &_item--a:active{
+                color: $color-secundary;
+            }
+        }
     }
+}
+
+.navegacion__svg:hover{
+    fill: $color-secundary;
+    border-radius: 20%;
+    box-shadow: 0 1px 2px 0 rgba(251, 238, 217, 0.7), 0 1px 8px 2px rgba(251, 238, 217, 0.42);
 }
 
 .search_text {
@@ -87,11 +124,6 @@
 .wh_iconos {
     width: 32px;
 }
-
-/* Icono del menu y input donde hay un checkbox */
-// .navegacion__cont_label, .navegacion__cont_input{
-//     display: none;
-//   }
 
 a:hover{
     color: $color-secundary;
