@@ -1,0 +1,99 @@
+@use '../utilities/mixins';
+@use '../utilities/functions';
+
+.navegacion{
+
+    &__cont {
+        width: 96%;
+        margin: 0 auto;
+        @include mixins.flexible(flex, row, space-between, center);
+        padding: functions.pixeles-em(24);
+        @include movil(1024px){
+            width:100%
+        }
+
+        &_logotipo {
+            display: flex;
+            cursor: pointer;
+
+            & .class_logo {
+                position: relative;
+                width: functions.pixeles-em(192);
+                @include movil(1500px) {
+                    width:functions.pixeles-em(176)
+                }
+            }
+        }
+
+        &_nav {
+            list-style: none;
+            width: 80%;
+            font-family: $font-primary;
+            font-size: functions.pixeles-rem(22);
+            @include mixins.flexible-3(flex, row, space-between);
+            @include movil(1500px) {
+                display: none;
+            }
+        }
+
+        &_item {
+            padding-top: 5px;
+            &--a{
+                --clip_p: polygon(0 0, 0 0, 0 100%, 0% 100%);
+                &::after{
+                    content: "";
+                    display: block;
+                    background: $background-tertiary;
+                    margin-top: 3px;
+                    padding-bottom: 2.5px;
+                    clip-path: var(--clip_p);
+                    transition: clip-path .4s;
+                }
+                &:hover{
+                    --clip_p:polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                }
+            }
+        }
+
+        &_iconos_nav {
+            @include mixins.flexible-3(flex, row, center);
+            gap: 15px;
+            @include movil(1500px) {
+                flex-direction: column-reverse;
+                align-items: center;
+                gap: functions.pixeles-rem(56);
+            }
+            
+            &--busqueda {
+                width: functions.pixeles-em(224);
+                @include mixins.flexible(flex, row, space-between, center);
+                gap: functions.pixeles-rem(8);
+            }
+        }
+    }
+}
+
+.search_text {
+    display: inline-block;
+    width: 100%;
+    height: 32px;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: functions.pixeles-rem(14.4);
+    background-color: $background-tertiary;
+    box-shadow: none;
+}
+
+.wh_iconos {
+    width: 32px;
+}
+
+/* Icono del menu y input donde hay un checkbox */
+// .navegacion__cont_label, .navegacion__cont_input{
+//     display: none;
+//   }
+
+a:hover{
+    color: $color-secundary;
+}
+

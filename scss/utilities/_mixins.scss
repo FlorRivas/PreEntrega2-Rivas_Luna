@@ -5,6 +5,12 @@
     align-items: $align;
 }
 
+@mixin flexible-3($dis,$direction, $justify){
+    display: $dis;
+    flex-direction: $direction;
+    justify-content:$justify;
+}
+
 @mixin movil($medida:768px){
     @media screen and (max-width:$medida){
         @content;

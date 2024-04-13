@@ -12,14 +12,12 @@
         text-decoration: none;
         cursor: pointer;
         gap: 8px;
-
         @include movil(){width: 14em;}
         @include movil(1024px){width: 15em;}
-
+        
         &--text{
             font-size: functions.pixeles-em(20);
             font-weight: 600;
-
             @include movil(620px){font-size: functions.pixeles-rem(17.60);}
             @include movil(){font-size: functions.pixeles-rem(17.60);}
         }
@@ -37,7 +35,9 @@
             color: $color-tertiary;
             font-weight: 600;
             box-shadow: 0 1px 3px 0 rgba(241, 191, 123,.25), 0 4px 8px 3px rgba(241, 191, 123,.15);
+            svg{
             fill: $color-tertiary;
+            }
         }
     }
     &__icon-descarga {
