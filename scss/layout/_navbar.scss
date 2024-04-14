@@ -1,6 +1,7 @@
 @use '../utilities/mixins';
 @use '../utilities/functions';
 
+/* Navbar */
 .navegacion{
 
     &__cont {
@@ -52,28 +53,38 @@
                 &:hover{
                     --clip_p:polygon(0 0, 100% 0, 100% 100%, 0 100%);
                 }
+                @include movil(1500px){
+                &:hover{
+                    display:none;
+                }
+                &:active{
+                    color: $color-secundary;
+                }
+                }
             }
         }
 
         &_iconos_nav {
             @include mixins.flexible-3(flex, row, center);
-            gap: 15px;
+            gap: functions.pixeles-em(16);
             @include movil(1500px) {
                 flex-direction: column-reverse;
                 align-items: center;
-                gap: functions.pixeles-rem(56);
+                gap: functions.pixeles-em(56);
             }
             
             &--busqueda {
                 width: functions.pixeles-em(224);
                 @include mixins.flexible(flex, row, space-between, center);
-                gap: functions.pixeles-rem(8);
+                gap: functions.pixeles-em(8);
             }
         }
+
         &_label, 
         &_input{
             display: none;
         }
+        
         @include movil(1500px){
             &_label{
             display: block;
@@ -93,12 +104,6 @@
             &_input:checked + &_nav{
                 clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
                 // overflow: hidden;
-            }
-            &_item--a:hover{
-                display:none;
-            }
-            &_item--a:active{
-                color: $color-secundary;
             }
         }
     }
@@ -128,4 +133,4 @@
 a:hover{
     color: $color-secundary;
 }
-
+/* Fin Navbar */

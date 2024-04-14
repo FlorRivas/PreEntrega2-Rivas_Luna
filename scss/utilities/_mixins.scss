@@ -1,13 +1,31 @@
-@mixin flexible($dis,$direction, $justify, $align){
+@mixin flexible($dis, $direction, $justify, $align){
     display: $dis;
     flex-direction: $direction;
     justify-content:$justify;
     align-items: $align;
 }
 
-@mixin flexible-3($dis,$direction, $justify){
+@mixin flexible-3($dis, $direction, $justify){
     display: $dis;
     flex-direction: $direction;
+    justify-content:$justify;
+}
+
+@mixin flexible_flow($dis, $direction, $corte, $justify, $align){
+    display: $dis;
+    flex-flow: $direction $corte;
+    justify-content:$justify;
+    align-items: $align;
+}
+
+@mixin flexible_flow-2($dis, $direction, $corte){
+    display: $dis;
+    flex-flow: $direction $corte;
+}
+
+@mixin flexible_flow-3($dis, $direction, $corte, $justify){
+    display: $dis;
+    flex-flow: $direction $corte;
     justify-content:$justify;
 }
 
@@ -16,3 +34,15 @@
         @content;
     }
 }
+
+@mixin movil_min($medida:768px){
+    @media screen and (min-width:$medida){
+        @content;
+    }
+}
+
+// @mixin minmax($medida1:0px)($medida2:768px){
+//     @media screen and (min-width:$medida1) and (max-width:$medida2){
+//         @content;
+//     }
+// }

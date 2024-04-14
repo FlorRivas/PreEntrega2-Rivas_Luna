@@ -1,0 +1,148 @@
+@use '../utilities/mixins';
+@use '../utilities/functions';
+
+/*  Footer */
+footer {
+    position: relative;
+    background-color: $color-tertiary;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.45);
+}
+
+.pie_pag {
+    width: 100vw;
+    padding: functions.pixeles-rem(64) 4.5% functions.pixeles-rem(48);
+    @include flexible_flow-3(flex, row, wrap, space-between);
+
+    @include movil(){
+        &{
+            @include flexible_flow-2(flex, column, wrap);
+            padding: functions.pixeles-em(64) 8.5% functions.pixeles-rem(32);
+        }
+    }
+
+    & ul {
+        @include flexible-3(flex, column, space-evenly);
+        padding-left: 0;
+    }
+
+    & ul .link_secc a {
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+    }
+
+    // Contenido 1 pie pag
+    &__cont1 {
+        width: 28%;
+        margin-bottom: functions.pixeles-em(16);
+        display: flex;
+        flex-direction: column;
+    }
+
+    h3 {
+        font-family: $font-primary;
+        color: $color-primary;
+        font-size: functions.pixeles-rem(20.8);
+        font-weight: normal;
+    }
+
+    & img, h3 {
+        margin-bottom: functions.pixeles-em(32);
+    }
+
+    &__cont1 &__logo {
+        position: relative;
+        width: functions.pixeles-em(168);
+    }
+
+    @include movil_min(320px){
+        &__cont1 &__logo, h3{
+            margin-bottom: functions.pixeles-em(16);
+        }
+    }
+
+    &__cont1 .link_secc a, &__cont1 &__text_gen {
+        padding: 10px 0;
+        color: $color-primary;
+        font-size: functions.pixeles-rem(16);
+    }
+
+    // Contenido 2 pie pag
+    &__cont2 {
+        width: 60%;
+        @include flexible_flow-3(flex, row, wrap, space-between);
+    }
+
+    @include movil(){
+        &__cont1{
+            width: 100%;
+        }
+        &__cont2{
+            width: 100%;
+        }
+    }
+
+    &__cont2 .cont_pie_selec {
+        margin-bottom: functions.pixeles-em(16);
+        width: 28%;
+    }
+
+    &__cont2 div:nth-child(1) {
+        padding-left: functions.pixeles-em(30);
+    }
+
+    &__cont2 .cont_pie_selec h2 {
+        font-family: $font-primary;
+        color: $color-primary;
+        font-size: functions.pixeles-rem(20.8);
+        font-weight: normal;
+    }
+
+    &__cont2 .link_secc a, &__cont2 .text_gen_pie {
+        padding: 10px 0;
+        color: $color-primary;
+        font-size: functions.pixeles-rem(16);
+        text-decoration: none;
+    }
+
+    @include movil(){
+        &__cont1 .link_secc a, &__cont1 &__text_gen{
+            font-size: functions.pixeles-rem(14);
+        }
+        &__cont2 .link_secc a, &__cont2 .text_gen_pie{
+            font-size: functions.pixeles-rem(14);
+            padding: 8px 0;
+        }
+    }
+
+    &__cont2 .icn {
+        width: 32px;
+        height: 32px;
+        margin-right: 5px;
+        background-repeat: no-repeat;
+        flex: none;
+    }
+
+    @include movil(){
+        &__cont2 div:nth-child(1){
+            padding-left: 0em;
+        }
+        &__cont2 .cont_pie_selec{
+            width: 100%;
+            margin-bottom: functions.pixeles-em(32);
+        }
+    }
+
+    &__cont2 .icn.bi_mail {
+        background-image: url("../../img/imgs_gen/mail.svg");
+    }
+    &__cont2 .icn.bi_wht {
+        background-image: url("../../img/imgs_gen/whatsapp.svg");
+    }
+    &__cont2 .icn.bi_fb {
+        background-image: url("../../img/imgs_gen/facebook.svg");
+    }
+    &__cont2 .icn.bi_ig {
+        background-image: url("../../img/imgs_gen/Instagram.svg");
+    }
+}

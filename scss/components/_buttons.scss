@@ -1,6 +1,7 @@
 @use '../utilities/mixins';
 @use '../utilities/functions';
 
+/* Buttons */
 .main_cont{
 
     &__btn {
@@ -59,3 +60,4 @@
     border: 1px solid #29a71a;
     box-shadow: 0 1px 3px 0 rgba(41, 167, 26,.35), 0 4px 8px 3px rgba(41, 167, 26,.2);
 }
+/* Fin Buttons */

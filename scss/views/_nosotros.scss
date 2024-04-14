@@ -1,0 +1,30 @@
+@use '../utilities/mixins';
+@use '../utilities/functions';
+
+/* Pagina Nosotros */
+.main_cont{
+    &__bg-bloque{
+        width: 100%;
+        height: auto;
+        background: rgba(134, 162, 187, 0.3);
+        padding: functions.pixeles-em(27.2);
+        border: .1px solid rgba(134, 162, 187, 0.3);
+        border-radius: functions.pixeles-em(22.4);
+        box-shadow: 0px 0px 8px rgba(134, 162, 187, 0.3);
+    }
+
+    &__img--bd_radius-1{
+        border-radius: functions.pixeles-em(16);
+    }
+
+    &__img--bd-radius-2{
+        border-radius: functions.pixeles-em(32);
+    }
+
+    @include movil(700px){
+        &__img--bd-radius-2{
+            border-radius: functions.pixeles-em(28.8);
+        }
+    }
+}
+/* Fin Pagina Nosotros */

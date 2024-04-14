@@ -1,0 +1,49 @@
+@use '../utilities/mixins';
+@use '../utilities/functions';
+
+/* Main */
+.main_cont{
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    min-width: 320px;
+    position: relative;
+    
+    &__bg-gradient{
+        width: 100%;
+        height: 100dvh;
+        background-image: linear-gradient(to top, $background-primary, transparent);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &__img-portada {
+        background-image: url(../../img/imgs_pag_index/portada.webp);
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: 54% 20%;
+        width: 100%;
+        height: 100dvh;
+        display: flex;
+    }
+    &__txt {
+        @include flexible-3(flex, column, center);
+        margin-left: functions.pixeles-em(80);
+        gap: functions.pixeles-em(32);
+        z-index: 2;
+        @include movil(320px){
+            margin: functions.pixeles-em(320) auto functions.pixeles-em(128);
+            gap: functions.pixeles-em(16);
+        }
+        @include movil(){
+            margin-left: functions.pixeles-em(32);
+        }
+        @include movil(1024px){
+            margin-left: functions.pixeles-em(48);
+        }
+        @include movil(1760px){
+            margin-left: functions.pixeles-em(64);
+        }
+    }
+}

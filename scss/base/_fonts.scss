@@ -1,19 +1,19 @@
 @font-face {
-    font-family: 'Vollkorn-Regular';
+    font-family: $font-primary;
     src: url('../fonts/Vollkorn-Regular.otf');
 }
 
 @font-face {
-    font-family: 'NotoSans-Regular';
+    font-family: $font-secundary;
     src: url('../fonts/NotoSans-Regular.otf');
 }
 
 @font-face {
-    font-family: 'NotoSans-Light';
-    src: url('../fonts/NotoSans-Light.otf');
-    }
-
-@font-face {
-    font-family: 'Literata-Regular';
+    font-family: $font-tertiary;
     src: url('../fonts/Literata-Regular.otf');
 }
+
+@font-face {
+    font-family: $font-quaternary;
+    src: url('../fonts/NotoSans-Light.otf');
+    }

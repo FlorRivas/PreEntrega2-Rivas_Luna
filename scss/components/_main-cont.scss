@@ -1,0 +1,29 @@
+/* Contenido General */
+.main_cont{
+
+    &__ft1 {
+        font-family: $font-primary;
+    }
+
+    &__ft2-light {
+        font-family: $font-quaternary;
+    }
+
+    &__ft3-Regular {
+        font-family: $font-tertiary;
+        line-height: normal;
+    }
+
+    &__c--primary{
+        color: $color-primary;
+    }
+
+    &__c--secundary{
+        color: $color-secundary;
+    }
+
+    &__c--tertiary{
+        color: $font-primary;
+    }
+}
+/* Fin Contenido General */
