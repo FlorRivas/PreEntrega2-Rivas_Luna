@@ -54,12 +54,15 @@
                     --clip_p:polygon(0 0, 100% 0, 100% 100%, 0 100%);
                 }
                 @include movil(1500px){
-                &:hover{
-                    display:none;
-                }
-                &:active{
-                    color: $color-secundary;
-                }
+                    &{
+                        cursor: none;
+                    }
+                    &:hover{
+                        display:none;
+                    }
+                    &:active{
+                        color: $color-secundary;
+                    }
                 }
             }
         }
@@ -103,7 +106,7 @@
             }
             &_input:checked + &_nav{
                 clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-                // overflow: hidden;
+                overflow-x: hidden;
             }
         }
     }

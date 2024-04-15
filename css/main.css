@@ -140,6 +140,9 @@ ul li a {
   --clip_p:polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 @media screen and (max-width: 1500px) {
+  .navegacion__cont_item--a {
+    cursor: none;
+  }
   .navegacion__cont_item--a:hover {
     display: none;
   }
@@ -192,6 +195,7 @@ ul li a {
   }
   .navegacion__cont_input:checked + .navegacion__cont_nav {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    overflow-x: hidden;
   }
 }
 
@@ -313,7 +317,7 @@ a:hover {
   left: 0;
 }
 .main_cont__img-portada {
-  background-image: url(../../img/imgs_pag_index/portada.webp);
+  background-image: url(img/imgs_pag_index/portada.webp);
   background-size: cover;
   background-attachment: fixed;
   background-position: 54% 20%;
