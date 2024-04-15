@@ -300,7 +300,7 @@ a:hover {
 }
 
 /* Fin Buttons */
-/* Main */
+/* Main Inicio */
 .main_cont {
   width: 100%;
   height: auto;
@@ -355,6 +355,7 @@ a:hover {
   }
 }
 
+/* Fin Main Inicio */
 /* Contenido General */
 .main_cont__ft1 {
   font-family: "Vollkorn-Regular";
